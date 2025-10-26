@@ -1,0 +1,41 @@
+
+.cardContainer{
+  perspective: 1000px;
+}
+
+.card{
+  border-radius: 12px;
+  background-color: #fff;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.cardinnerHeader{
+  display: flex;
+  justify-content: space-between;
+}
+
+.image{
+  width: 500px;
+  height: 250px;
+  object-fit: cover;
+  position: relative;
+}
+
+
+.cardinner{
+  padding: 1rem;
+
+  .index{
+    font-size: 12px;
+    color:#888
+  }
+
+  .title{
+    font-size: 24px;
+    font-weight: 700;
+  }
+}

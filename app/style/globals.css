@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family:"Noto Sans KR", sans-serif;
+}
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+ul,ol,li{
+  list-style: none;
+}
+
+h1{
+  text-transform:uppercase;
+  color:#141414;
+  font-size: 12rem;
+  line-height: 1;
+}
+
+a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color:#141414;
+  font-family: "DM Mono", monospace;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+nav{
+  position: fixed;
+  width: 100vw;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.nav-logo a{
+  font-family:"Noto Sans KR", sans-serif;
+  font-size: 1.25rem;
+}
+
+.nav-links{
+  display: flex;
+  gap: 2rem;
+}
+
+.container{
+  position: relative;
+  width: 100%;
+  gap: 100%;
+  min-height: 100svh;
+  background-color: #e3e4d8;
+}
+
+.page-header{
+  width: 100vw;
+  height: 100svh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.about{
+  width: 30%;
+  margin: 0 auto;
+  padding: 15rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about img{
+  aspect-ratio: 5/7;
+}
+
+.transition-overlay .block {
+  flex: 1;
+  height: 100%;
+  background-color: #1a1a1a;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+/* PageTransition 스타일 */
+
+.transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+.transition-overlay .block {
+  flex: 1;
+  height: 100%;
+  background-color: #1a1a1a;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.logo-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container svg {
+  width: 160px;
+  height: 160px;
+}
+@media (max-width:1000px) {
+  h1{
+    font-size: 3rem;
+  }
+}
