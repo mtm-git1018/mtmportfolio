@@ -1,8 +1,4 @@
 
-.cardContainer{
-  perspective: 1000px;
-}
-
 .card{
   border-radius: 12px;
   background-color: #fff;
@@ -10,7 +6,7 @@
   cursor: pointer;
   position: relative;
   transition: transform 0.8s;
-  transform-style: preserve-3d;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 .cardinnerHeader{
@@ -24,7 +20,6 @@
   object-fit: cover;
   position: relative;
 }
-
 
 .cardinner{
   padding: 1rem;

@@ -1,11 +1,21 @@
 import S from '@/app/style/content.module.css'
 import { StaticImageData } from 'next/image'
 import Image from 'next/image'
+import Link from 'next/link'
 
+interface Lists{
+  list: string,
+  detail:string
+}
+
+interface Link{
+  title:string
+  url:string
+}
 interface Section{
   title: string,
   content?:string
-  items?:string[]
+  lists?: Lists[]
 }
 
 interface Props {
@@ -15,18 +25,15 @@ interface Props {
   role:string[],
   team: number | string,
   tech: string[],
-  section:Section[]
+  section: Section[],
+  link: Link[]
 }
 
-function Content({ src,title,period,role,team,tech,section}:Props) {
+function Content({ src,title,period,role,team,tech,section,link}:Props) {
   return (
     <div className={S.contentWrap}>
       <div className={S.imageBox}>
-        <Image src={src}
-          alt={title}
-          fill
-          priority
-          className={S.heroImg} />
+        <Image src={src} alt={title} fill priority className={S.heroImg} />
       </div>
       <header className={S.title}>
         <h2>{title}</h2>
@@ -58,19 +65,34 @@ function Content({ src,title,period,role,team,tech,section}:Props) {
       </div>
 
       <main className={S.mainContent}>
-        {section.map(({ title, content, items }, i) => (
+        {section.map(({ title, content, lists }, i) => (
           <section key={i} className={S.mainItems}>
             <h3>{title}</h3>
             {content && <p className={S.content}>{content}</p>}
-            {items && (
-              <ul>
-                {items.map((v, i) => (
-                  <li key={i}>{v}</li>
-                ))}
-              </ul>
-            )}
+            {lists &&
+              lists.map(({ list, detail }, i) => (
+                <span key={i}>
+                  <h4>{list}</h4>
+                  <p style={{ whiteSpace: "pre-line" }}>{detail}</p>
+                </span>
+              ))}
           </section>
         ))}
+
+        <div className={S.link}>
+          <h3>링크</h3>
+
+          <div className={S.btnWrap}>
+            {link.map(({ url, title }) => (
+              <Link href={url} key={title}>
+                <button type="button" className={S.button}>
+                  {title}
+                </button>
+              </Link>
+            ))}
+          </div>
+
+        </div>
       </main>
     </div>
   );

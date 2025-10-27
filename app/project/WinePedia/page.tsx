@@ -21,19 +21,42 @@ function page() {
     section: [
       {
         title: "프로젝트 소개",
-        content: `와인의 맛과 향이 어려운 소비자들을 위해 소비자 평가와 페어링 정보를 제공하며,\n
-        커뮤니티에서 다양한 의견을 공유할 수 있습니다. 
-        와인 초보자도 쉽게 자신에게 맞는 와인을 찾을 수 있도록
-        직관적인 UI/UX를 제공합니다.`,
+        content: `와인의 맛과 향이 어려운 소비자들을 위해 소비자 평가와 페어링 정보를 제공하며,\n 커뮤니티에서 다양한 의견을 공유할 수 있습니다. 
+        와인 초보자도 쉽게 자신에게 맞는 와인을 찾을 수 있도록 직관적인 UI/UX를 제공합니다.`,
       },
       {
         title: "담당 기능",
-        items: [
-          "로그인/회원가입 (Supabase Auth 소셜 로그인)",
-          "메인페이지 구현 (와인 추천 알고리즘)",
-          "커뮤니티 댓글 CRUD",
-          "전체 검색창 (최근 검색어, 인기 태그, 종류별 필터링)",
+        lists: [
+          {
+            list: "로그인/회원가입",
+            detail:
+              "Supabase Auth를 사용하여 회원가입 및 로그인을 구현하였고, \n Zustand를 활용하여 전역상태에서 유저의 상태관리를 하였습니다.",
+          },
+          {
+            list: "메인페이지",
+            detail:
+              "Swiper를 사용한 스크롤 애니메이션과 메인페이지 UI를 개발하였습니다",
+          },
+          {
+            list: "검색창",
+            detail:
+              "검색창에서 Storage를 활용하여 최근검색어, 인기 태그, 종류별 필터링 기능을 개발하였습니다.",
+          },
         ],
+      },
+    ],
+    link: [
+      {
+        url: "https://github.com/mtm-git1018/FES-5-Project3-TEAM-3/tree/main",
+        title: "깃 허브",
+      },
+      {
+        url: "https://winepedia.vercel.app/",
+        title: "배포 링크",
+      },
+      {
+        url: "",
+        title: "프레젠테이션 영상",
       },
     ],
   };
@@ -45,7 +68,8 @@ function page() {
           role={project.role}
           team={project.team}
           tech={project.tech}
-          section={ project.section } />
+          section={project.section}
+        link={project.link}/>
       </div>
     </article>
   );

@@ -69,6 +69,7 @@ margin-top: 80px;
 
 .content{
   white-space: pre-line;
+  line-height: 1.5;
 }
 
 .mainContent{
@@ -80,5 +81,26 @@ margin-top: 80px;
 .mainItems{
   display: flex;  
   flex-direction: column;
+  gap: 12px;
+}
+
+.button{
+  outline: none;
+  border:none;
+  background-color: #141414;
+  color: #a3e4d8;
+  cursor: pointer;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+}
+
+.link{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btnWrap{
+  display: flex;
   gap: 12px;
 }
