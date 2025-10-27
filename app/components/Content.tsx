@@ -71,7 +71,7 @@ function Content({ src,title,period,role,team,tech,section,link}:Props) {
             {content && <p className={S.content}>{content}</p>}
             {lists &&
               lists.map(({ list, detail }, i) => (
-                <span key={i}>
+                <span key={i} className={S.func}>
                   <h4>{list}</h4>
                   <p style={{ whiteSpace: "pre-line" }}>{detail}</p>
                 </span>
