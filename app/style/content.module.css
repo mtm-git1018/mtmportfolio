@@ -1,0 +1,74 @@
+.contentWrap{
+  padding-top: 100px;
+}
+
+.heroImg{
+  width: 80vw;
+  height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  object-fit: cover;
+
+}
+
+.title{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap:8px;
+
+}
+
+.info {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.label {
+  font-weight: 600;
+  color: #333;
+}
+.techStack {
+  margin-bottom: 2rem;
+}
+
+.techStack h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.techTag {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.mainContent{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mainItems{
+  display: flex;  
+  flex-direction: column;
+  gap: 12px;
+}

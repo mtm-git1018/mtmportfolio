@@ -1,4 +1,3 @@
-
 import S from './page.module.css'
 import winePedia from '@/public/winepedia.png'
 import Ssoul from '@/public/ssoul.png'

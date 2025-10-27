@@ -27,7 +27,6 @@ function Card({ id, src, title, description, period, team }: Props) {
           <div className={S.cardinner}>
             <header className={S.cardinnerHeader}>
               <p className={S.index}>Project.0{id}</p>
-              <Link href={`project/${title}`}>자세히 보기</Link>
             </header>
             <p className={S.title}>{title}</p>
             <p>{description}</p>
