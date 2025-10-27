@@ -7,20 +7,19 @@ function page() {
     title: "SSOUL",
     period: "2025.09.15 ~ 2025.10.16",
     role: ["팀장", "칵테일 페이지","마이페이지"],
-    team: 7,
-    tech: ["Next.js", "TailwindCSS", "Zustand", "Tanstack-Query"],
+    team: '프론트엔드 3 , 백엔드 5 ',
+    tech: ["Next.js", "TailwindCSS","Tanstack-Query"],
     section: [
       {
         title: "프로젝트 소개",
-        content: `홈 바텐더와 칵테일에 입문하는 사람들을 위한 정보공유 커뮤니티`,
+        content: `칵테일에 입문하는 사람들과 홈 바텐더들을 위한 정보공유 커뮤니티`,
       },
       {
         title: "담당 기능",
         items: [
-          "로그인/회원가입 (Supabase Auth 소셜 로그인)",
-          "메인페이지 구현 (와인 추천 알고리즘)",
-          "커뮤니티 댓글 CRUD",
-          "전체 검색창 (최근 검색어, 인기 태그, 종류별 필터링)",
+          "칵테일 페이지(데이터 호출 및 정렬, 검색 기능)",
+          "마이페이지(개인화 작업)",
+          "공통 컴포넌트제작",
         ],
       },
     ],

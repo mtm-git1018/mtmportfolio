@@ -13,7 +13,7 @@ interface Props {
   title: string,
   period: string,
   role:string[],
-  team: number,
+  team: number | string,
   tech: string[],
   section:Section[]
 }
@@ -21,13 +21,13 @@ interface Props {
 function Content({ src,title,period,role,team,tech,section}:Props) {
   return (
     <div className={S.contentWrap}>
-      <Image
-        src={src}
-        alt={title}
-        width={1200}
-        height={400}
-        className={S.heroImg}
-      />
+      <div className={S.imageBox}>
+        <Image src={src}
+          alt={title}
+          fill
+          priority
+          className={S.heroImg} />
+      </div>
       <header className={S.title}>
         <h2>{title}</h2>
         <ul className={S.info}>
@@ -57,11 +57,11 @@ function Content({ src,title,period,role,team,tech,section}:Props) {
         </ul>
       </div>
 
-      <main className={S.mainContent }>
+      <main className={S.mainContent}>
         {section.map(({ title, content, items }, i) => (
           <section key={i} className={S.mainItems}>
             <h3>{title}</h3>
-            {content && <p>{content}</p>}
+            {content && <p className={S.content}>{content}</p>}
             {items && (
               <ul>
                 {items.map((v, i) => (
