@@ -51,5 +51,11 @@
 
 .profile{
   display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+
+.myProfile{
+  display: flex;
   gap:20px;
 }

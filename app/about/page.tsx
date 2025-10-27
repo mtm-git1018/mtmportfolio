@@ -135,9 +135,9 @@ function page() {
                   ))}
                 </ul>
               </div>
-              <div>
+              <div className={S.profile}>
                 <h2>Profile</h2>
-                <ul className={S.profile}>
+                <ul className={S.myProfile}>
                   {MY_PROFILE.map(({ id, title, value }) => (
                     <li key={id}>
                       <strong>{title}</strong>
