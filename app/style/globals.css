@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
 
+
+:root{
+  --font-serif:  "EB Garamond", serif;
+  --color-prime : #141414;
+}
 
 *{
   margin: 0;
@@ -11,7 +16,13 @@
 
 body{
   font-family:"Noto Sans KR", sans-serif;
-  color:#141414;
+  color:var(--color-prime)
+}
+
+button{
+  outline: none;
+  border:none;
+  background: none;
 }
 
 img{
@@ -34,7 +45,7 @@ h1{
 a{
   text-decoration: none;
   text-transform: uppercase;
-  color:#141414;
+  color:var(--color-prime);
   font-family: "Montserrat", sans-serif;
   font-size: 0.9rem;
   font-weight: 500;
@@ -45,11 +56,10 @@ a:hover{
   opacity: 0.8;
 }
 
-
 nav{
   position: fixed;
   width: 100vw;
-  padding: 2rem;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,7 +72,7 @@ nav{
 }
 
 .nav-logo a{
-  font-family:"Noto Sans KR", sans-serif;
+  font-family: var(--font-serif);
   font-size: 1.25rem;
   transition: all 0.3s;
 }
@@ -72,10 +82,6 @@ nav{
   opacity: 0.8;
 }
 
-.nav-links{
-  display: flex;
-  gap: 2rem;
-}
 
 .container{
   position: relative;
@@ -103,9 +109,6 @@ nav{
   gap: 2rem;
 }
 
-.about img{
-  aspect-ratio: 5/7;
-}
 
 .transition-overlay .block {
   flex: 1;
@@ -114,6 +117,7 @@ nav{
   transform: scaleX(0);
   transform-origin: left;
 }
+
 /* PageTransition 스타일 */
 
 .transition-overlay {
@@ -124,7 +128,7 @@ nav{
   height: 100%;
   display: flex;
   pointer-events: none;
-  z-index: 9998;
+  z-index: 9;
 }
 
 .transition-overlay .block {
@@ -160,6 +164,9 @@ nav{
   width: 160px;
   height: 160px;
 }
+
+
+
 @media (max-width:1000px) {
   h1{
     font-size: 3rem;

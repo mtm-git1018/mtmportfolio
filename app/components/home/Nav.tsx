@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import NavBtn from "./NavBtn";
 
 
 function Nav() {
@@ -21,20 +22,18 @@ function Nav() {
     window.addEventListener('scroll', handleScroll)
     
     return () => {
-      window.removeEventListener('scroll',handleScroll)
+     window.removeEventListener('scroll',handleScroll)
     }
   }, [scroll])
+
+  
   
   return (
     <nav className={ isScroll ? 'navBlur':" "}>
       <div className="nav-logo">
         <Link href='/'>Moon Tae Min</Link>
       </div>
-      <div className="nav-links">
-        <Link href='/'>Home</Link>
-        <Link href='/about'>About</Link>
-        <Link href='/project'>Project</Link>
-      </div>
+        <NavBtn/>
     </nav>
   )
 }

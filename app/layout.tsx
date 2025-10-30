@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "@/app/style/globals.css";
-import Nav from "./components/Nav";
+import Nav from "./components/home/Nav";
 import PageTransition from "./components/PageTransition";
 
 

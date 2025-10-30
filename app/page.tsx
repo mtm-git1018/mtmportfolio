@@ -1,11 +1,13 @@
-
+import TimeLine from './components/TimeLine';
 
 export default function Home() {
-  return <>
-    <div className="container">
-      <div className="page-header">
-        <h1>FrontEnd Developer Portfolio</h1>
+  return (
+    <>
+      <div className="container">
+        <div className="page-header">
+          <TimeLine/>
+        </div>
       </div>
-    </div>
-  </>
+    </>
+  );
 }
