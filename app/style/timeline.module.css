@@ -91,9 +91,24 @@
     gap: 12px;
   }
 
+.btn{
+  padding: 0.5rem 1rem;
+}
+
   .button{
     font-size: 24px;
-    white-space: no-wrap;
+
   }
 
+}
+
+@media (max-width:425px) {
+    .heroTitle{
+    font-size: 14px;
+    padding: 1rem;
+    }
+
+    .button{
+      font-size: 18px;
+    }
 }

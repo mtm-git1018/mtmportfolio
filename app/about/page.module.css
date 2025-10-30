@@ -1,51 +1,50 @@
 .aboutMe{
-  
-  width: 80vw;
-  height: 50svh;
-  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-  padding: 2rem;
-  margin-bottom: 120px;
+gap: 40px;
+}
+
+.introduce{
+  width: 50%;
+  height: 100%;
+
+  p{
+    margin-top: 12px;
+  }
+
 }
 
 
-.skill{
+.aboutRight{
+  width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 40px;
+ gap: 80px;
+}
+
+.skill{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
 }
 
 .mySkill{
   margin-top: 12px;
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap:24px;
 
 
   li{
     display: flex;
     gap:4px;
-    align-items: center ;
+    align-items: center;
+    white-space: no-wrap;
   }
 
   .skillImg{
     width: 24px;
     height: 24px;
   }
-}
-
-.introduce{
-  width: 50%;
-
-  p{
-    margin-top: 12px;
-  }
-}
-
-.skill{
-  width: 50%;
 }
 
 .profile{
@@ -57,4 +56,74 @@
 .myProfile{
   display: flex;
   gap:20px;
+}
+
+@media (max-width:1024px) {
+
+  .introduce{
+    font-size: 14px;
+  }
+  
+  .skill{
+    width: 100%;
+  }
+
+  .myProfile{
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width:768px) {
+  .aboutMe{
+    margin-top: 40px;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .introduce{
+    width: 100%;
+  }
+
+  .aboutRight{
+    width: 100%;
+  }
+
+  .skill h2{
+    font-size: 20px;
+  }
+
+  .profile h2{
+    font-size: 20px;
+  }
+
+  
+  .skillImg{
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width:465px) {
+
+  .aboutMe{
+    margin-top: 60px;
+  }
+
+  .introduce{
+    font-size: 12px;
+  }
+
+    
+  .skillImg{
+    width: 16px;
+    height: 16px;
+  }
+
+  .mySkill li>p{
+    font-size: 12px;
+  }
+
+  .profile{
+    font-size: 14px;
+  }
 }

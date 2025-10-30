@@ -83,8 +83,8 @@ function page() {
   return (
     <>
       <ReactLenis root />
-      <div className="container">
-        <div className='page-header'>
+      <section className="container">
+        <div className="page-header">
           <div className={S.aboutMe}>
             <div className={S.introduce}>
               <h2>Introduce</h2>
@@ -117,8 +117,9 @@ function page() {
                 협업하는 프론트엔드 개발자로 성장하고 있습니다.
               </p>
             </div>
-            <div className={S.skill}>
-              <div>
+
+            <div className={S.aboutRight}>
+              <div className={S.skill}>
                 <h2>Skill</h2>
                 <ul className={S.mySkill}>
                   {MY_SKILL.map(({ id, title, src }) => (
@@ -128,9 +129,10 @@ function page() {
                         alt={title}
                         width={24}
                         height={24}
+                        sizes="(max-width: 768px) 16px, 24px"
                         className={S.skillImg}
                       />{" "}
-                      {title}
+                      <p>{title}</p>
                     </li>
                   ))}
                 </ul>
@@ -149,7 +151,7 @@ function page() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }
