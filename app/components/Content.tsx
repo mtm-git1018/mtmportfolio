@@ -33,7 +33,14 @@ function Content({ src,title,period,role,team,tech,section,link}:Props) {
   return (
     <div className={S.contentWrap}>
       <div className={S.imageBox}>
-        <Image src={src} alt={title} fill priority className={S.heroImg} />
+        <Image
+          src={src}
+          alt={title}
+          width={1400}
+          height={500}
+          sizes="(max-width: 768px) 100vw, (max-width: 1400px) 90vw, 1400px"
+          className={S.heroImg}
+        />
       </div>
       <header className={S.title}>
         <h2>{title}</h2>
@@ -91,7 +98,6 @@ function Content({ src,title,period,role,team,tech,section,link}:Props) {
               </Link>
             ))}
           </div>
-
         </div>
       </main>
     </div>

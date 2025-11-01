@@ -55,8 +55,8 @@ function page() {
         title: "배포 링크",
       },
       {
-        url: "",
-        title: "프레젠테이션 영상",
+        url: "WinePedia/detail",
+        title: "자세히보기",
       },
     ],
   };
