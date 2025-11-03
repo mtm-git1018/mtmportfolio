@@ -44,8 +44,8 @@ function page() {
         title: "배포 링크",
       },
       {
-        url: "",
-        title: "프레젠테이션 영상",
+        url: "/SSoulPDF.pdf",
+        title: "자세히 보기",
       },
     ],
   };
